@@ -33,7 +33,7 @@ void *add_server(char *srvspec) {
 	
 	s = srvspec;
 	do {
-		*s = tolower(*s);
+		//*s = tolower(*s);
 		if ( *s == ',' ) {
 			ccount++;
 			continue;
@@ -84,7 +84,7 @@ void *processline(char *s) {
 
 	do {
 		if( nvstate < 2 ) {
-			*s = tolower(*s);
+			//*s = tolower(*s);
 
 			if ( nvstate == 1 && *s == '"' ) {
 				nvstate = 2;
